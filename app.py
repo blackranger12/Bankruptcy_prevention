@@ -13,8 +13,8 @@ if __name__ == "__main__":
     main()
 
 # Load the pre-trained model
-with open("model_SVM", "rb") as file:
-    model = pickle.load(file)
+
+ model = pickle.load("model_SVM", "rb")
 
 training_feature_names = ['management_risk', 'financial_flexibility', 'credibility', 'competitiveness']
 
