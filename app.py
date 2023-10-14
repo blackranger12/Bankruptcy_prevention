@@ -3,6 +3,7 @@ from PIL import Image
 import pandas as pd
 import numpy as np
 import pickle  # Import joblib to load the pre-trained model
+import joblib
 
 def main():
     st.markdown("<h1 style='text-align: center; color: #15F4F4; text-decoration:underline;'>Bankruptcy Prevention</h1>", unsafe_allow_html=True)
@@ -13,12 +14,7 @@ if __name__ == "__main__":
     main()
 
 # Load the pre-trained model
-# model = load(open('model_SVM', 'rb'))
- import joblib
-
- model = joblib.load('model_SVM.pkl')
-
-
+model = joblib.load('model_SVM.pkl')
 training_feature_names = ['management_risk', 'financial_flexibility', 'credibility', 'competitiveness']
 
 # Function to make predictions
