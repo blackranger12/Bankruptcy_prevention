@@ -13,8 +13,11 @@ if __name__ == "__main__":
     main()
 
 # Load the pre-trained model
- model = load(open('model_SVM', 'rb'))
- 
+# model = load(open('model_SVM', 'rb'))
+ import joblib
+
+ model = joblib.load('model_SVM.pkl')
+
 
 training_feature_names = ['management_risk', 'financial_flexibility', 'credibility', 'competitiveness']
 
